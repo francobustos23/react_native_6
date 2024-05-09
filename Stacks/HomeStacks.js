@@ -2,7 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 //Importing Screens
 import { HomeScreen } from '../Screens/HomeScreen'
-import { StackScreen } from '../Screens/StackScreen'
+import { AgentsScreen } from '../Screens/AgentsScreen'
 
 const HomeStackNavigator = createNativeStackNavigator();
 
@@ -20,8 +20,8 @@ export const HomeStacks = () => {
                 }}
             />
             <HomeStackNavigator.Screen
-                name="Stacks"
-                component={StackScreen}
+                name="Agents"
+                component={AgentsScreen}
             />
         </HomeStackNavigator.Navigator>
     )
