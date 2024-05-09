@@ -3,10 +3,11 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Image } from 'react-native';
 //Importing Stacks Screens
 import { HomeStacks } from './Stacks/HomeStacks'
 //Importing Screens
-import { CardsScreen } from './Screens/CardsScreen'
+import { WeaponsScreen } from './Screens/WeaponsScreen'
 //Creating Bottom Tab Navigator
 const Tab = createBottomTabNavigator();
 
@@ -36,12 +37,12 @@ function MyTabs() {
        }}
        />
       <Tab.Screen
-       name="Cards"
-       component={CardsScreen} 
+       name="Weapons"
+       component={WeaponsScreen} 
        options={{
-        tabBarLabel: 'Cards',
+        tabBarLabel: 'Weapons',
         tabBarIcon: ({ color, size }) => (
-          <MaterialCommunityIcons name="cards" color={color} size={size} />
+          <Image source={require('./img/logoak.jpg')} style={{width:45, height:45}} />
         ),
         // tabBarBadge: 3,
        }}
