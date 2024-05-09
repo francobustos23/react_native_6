@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Video from 'react-native-video'
 
 export const HomeScreen = () => {
     const navigation = useNavigation();
