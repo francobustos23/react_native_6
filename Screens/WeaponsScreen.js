@@ -36,7 +36,7 @@ export const WeaponsScreen = () => {
                     <Text style={styles.buttonText}>Rifles</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => filterByCategory("Heavy")} style={styles.button}>
-                    <Text style={styles.buttonText}>Armas pesadas</Text>
+                    <Text style={styles.buttonText}>Heavy</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => filterByCategory("SMGs")} style={styles.button}>
                     <Text style={styles.buttonText}>SMGs</Text>
