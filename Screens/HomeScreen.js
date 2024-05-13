@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 export const HomeScreen = () => {
     const navigation = useNavigation();
@@ -8,7 +9,7 @@ export const HomeScreen = () => {
     return (
         <ImageBackground source={{uri:"https://wallpapers.com/images/hd/720p-counter-strike-global-offensive-background-f3x2vc2byan807cl.jpg"}} style={styles.image}>
             <View style={styles.container}> 
-                <Image source={require('../img/logocs.png')} style={{width:410, height:100}} />
+                <Image source={require('../img/logocs.png')} style={{width:scale(350), height: verticalScale(80)}} />
                 <TouchableOpacity
                     onPress={() => navigation.navigate("Agents")}
                     style={styles.button}
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         // justifyContent: "center",
+        width: scale(750),
         alignItems: "center",
         backgroundColor: "rgba(0,0,0,0.5)",
         padding:20
@@ -37,9 +39,9 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: "grey",
         padding: 10,
-        width: 150,
+        width: scale(140),
         borderRadius: 5,
-        marginTop: "50%",
+        marginTop: "17%",
     },
     buttonText: {
         fontSize: 20,
